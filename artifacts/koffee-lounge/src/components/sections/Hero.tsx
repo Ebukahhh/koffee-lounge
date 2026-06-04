@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, MapPin, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroImg from "../../assets/hero.png";
 
 export function Hero() {
@@ -48,42 +48,6 @@ export function Hero() {
               View Menu
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-          </div>
-        </motion.div>
-
-        {/* Quick Info Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl bg-background/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 md:p-8"
-        >
-          <div className="flex items-center gap-4 text-left">
-            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
-              <MapPin className="w-5 h-5" />
-            </div>
-            <div>
-              <h3 className="font-bold text-white mb-1">Location</h3>
-              <p className="text-sm text-white/60">Rose Pillars Shopping Village,<br/>La-Bawaleshi Rd, Accra</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 text-left">
-            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
-              <Clock className="w-5 h-5" />
-            </div>
-            <div>
-              <h3 className="font-bold text-white mb-1">Hours</h3>
-              <p className="text-sm text-white/60">Open Daily<br/>Closes 12:00 AM</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 text-left">
-            <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
-              <Phone className="w-5 h-5" />
-            </div>
-            <div>
-              <h3 className="font-bold text-white mb-1">Reservations</h3>
-              <p className="text-sm text-white/60">Call us to book<br/>055 350 0312</p>
-            </div>
           </div>
         </motion.div>
       </div>
