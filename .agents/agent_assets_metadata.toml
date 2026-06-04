@@ -1,0 +1,44 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "nXXYf8TDiOgDXBeg0OW9d"
+uri = "file://artifacts/koffee-lounge/src/assets/hero.png"
+type = "image"
+title = "Hero cinematic restaurant interior"
+
+[[generated]]
+id = "G_2aN234KycSXRrzpNr2-"
+uri = "file://artifacts/koffee-lounge/src/assets/gallery-1.png"
+type = "image"
+title = "Coffee latte art"
+
+[[generated]]
+id = "LjKLuVHSf6kJQ95AnA7K4"
+uri = "file://artifacts/koffee-lounge/src/assets/gallery-2.png"
+type = "image"
+title = "Craft cocktails"
+
+[[generated]]
+id = "65aOO9IXATUESnAkFm90X"
+uri = "file://artifacts/koffee-lounge/src/assets/gallery-3.png"
+type = "image"
+title = "Ghanaian breakfast plate"
+
+[[generated]]
+id = "4GeukmhRMOF8HEfEQKGHL"
+uri = "file://artifacts/koffee-lounge/src/assets/gallery-4.png"
+type = "image"
+title = "Moody lounge seating"
+
+[[generated]]
+id = "3hWI_-7qqMlLphkl5XWs0"
+uri = "file://artifacts/koffee-lounge/src/assets/gallery-5.png"
+type = "image"
+title = "Espresso machine"
+
+[[generated]]
+id = "p7WPFtWNfTMmE4nRHUDor"
+uri = "file://artifacts/koffee-lounge/src/assets/gallery-6.png"
+type = "image"
+title = "Elegant pastry"
