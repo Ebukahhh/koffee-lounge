@@ -67,8 +67,11 @@ export function Contact() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl text-foreground mb-1">Visit Us</h3>
-                  <p className="text-muted-foreground">Rose Pillars Shopping Village<br/>La-Bawaleshi Rd, Accra, Ghana</p>
+                  <h3 className="font-bold text-xl text-foreground mb-1">Our Locations</h3>
+                  <p className="text-muted-foreground font-semibold text-foreground/80 mb-1">Branch 1</p>
+                  <p className="text-muted-foreground mb-3">Rose Pillars Shopping Village<br/>La-Bawaleshi Rd, Accra, Ghana</p>
+                  <p className="text-muted-foreground font-semibold text-foreground/80 mb-1">Branch 2</p>
+                  <p className="text-muted-foreground">A&amp;C Mall, Jungle Road, Accra, Ghana</p>
                 </div>
               </div>
               

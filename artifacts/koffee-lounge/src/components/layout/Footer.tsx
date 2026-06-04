@@ -45,7 +45,17 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span>Rose Pillars Shopping Village,<br/>La-Bawaleshi Rd, Accra</span>
+                <span>
+                  <span className="block text-foreground/70 text-xs mb-0.5">Branch 1</span>
+                  Rose Pillars Shopping Village,<br/>La-Bawaleshi Rd, Accra
+                </span>
+              </li>
+              <li className="flex items-start gap-3 text-muted-foreground">
+                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <span>
+                  <span className="block text-foreground/70 text-xs mb-0.5">Branch 2</span>
+                  A&amp;C Mall, Jungle Road, Accra
+                </span>
               </li>
             </ul>
           </div>
