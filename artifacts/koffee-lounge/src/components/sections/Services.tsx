@@ -1,21 +1,27 @@
 import { motion } from "framer-motion";
 import { Utensils, GlassWater, Sparkles } from "lucide-react";
+import allYouCanEatImg from "../../assets/all-you-can-eat.jpg";
+import happyHourImg from "../../assets/happy-hour.jpg";
+import cocktailsImg from "../../assets/cocktails.jpg";
 
 const services = [
   {
     icon: <Utensils className="w-8 h-8" />,
     title: "All You Can Eat",
-    description: "Indulge in a boundless culinary experience featuring our chef's finest creations and signature Ghanaian dishes.",
+    description: "Indulge in a boundless culinary experience featuring our chef's finest creations and signature dishes.",
+    image: allYouCanEatImg,
   },
   {
     icon: <Sparkles className="w-8 h-8" />,
     title: "Happy Hour",
     description: "Elevate your evenings with our specially curated happy-hour menu, offering premium bites and a vibrant lounge atmosphere.",
+    image: happyHourImg,
   },
   {
     icon: <GlassWater className="w-8 h-8" />,
     title: "Great Cocktails",
     description: "Sip on masterfully crafted cocktails, balancing bold local flavors with classic mixology techniques.",
+    image: cocktailsImg,
   },
 ];
 
@@ -51,18 +57,38 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="bg-card border border-border p-10 rounded-2xl group hover:border-primary/50 transition-colors relative overflow-hidden"
+              className="bg-card border border-border p-8 md:p-10 rounded-2xl group hover:border-primary/50 transition-all duration-500 relative overflow-hidden min-h-[380px] flex flex-col justify-end cursor-pointer"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110"></div>
-              
-              <div className="w-16 h-16 bg-background rounded-full flex items-center justify-center text-primary mb-6 border border-border shadow-sm group-hover:scale-110 transition-transform duration-500">
-                {service.icon}
+              {/* Hover Image Reveal Background */}
+              <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out scale-110 group-hover:scale-100 pointer-events-none">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                {/* Dark Overlay for readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/85 to-black/45"></div>
               </div>
+
+              {/* Decorative top corner background */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110 z-10 pointer-events-none"></div>
               
-              <h3 className="text-2xl font-bold text-foreground mb-4">{service.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
+              {/* Card Content */}
+              <div className="relative z-10 flex flex-col items-start h-full justify-between gap-12">
+                <div className="w-16 h-16 bg-background/80 backdrop-blur-sm rounded-full flex items-center justify-center text-primary border border-border shadow-sm group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-500">
+                  {service.icon}
+                </div>
+                
+                <div>
+                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-white transition-colors duration-300">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground group-hover:text-neutral-200 leading-relaxed transition-colors duration-300 text-sm">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

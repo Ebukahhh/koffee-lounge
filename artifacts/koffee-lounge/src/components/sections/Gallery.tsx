@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import gallery1 from "../../assets/gallery-1.png";
-import gallery2 from "../../assets/gallery-2.png";
-import gallery3 from "../../assets/gallery-3.png";
-import gallery4 from "../../assets/gallery-4.png";
-import gallery5 from "../../assets/gallery-5.png";
-import gallery6 from "../../assets/gallery-6.png";
+import gallery1 from "../../assets/noodles.png";
+import gallery2 from "../../assets/cocktails.png";
+import gallery3 from "../../assets/breakfast.png";
+import gallery4 from "../../assets/rice.png";
+import gallery5 from "../../assets/savory.png";
+import gallery6 from "../../assets/continental.png";
 
 export function Gallery() {
   const images = [
-    { src: gallery1, alt: "Coffee latte art", aspect: "aspect-[4/3]" },
-    { src: gallery4, alt: "Moody lounge seating", aspect: "aspect-[3/4]" },
+    { src: gallery1, alt: "Noodles", aspect: "aspect-[4/3]" },
+    { src: gallery4, alt: "Special Rice Dishes", aspect: "aspect-[3/4]" },
     { src: gallery3, alt: "Ghanaian breakfast plate", aspect: "aspect-[4/3]" },
     { src: gallery2, alt: "Craft cocktails", aspect: "aspect-[3/4]" },
-    { src: gallery6, alt: "Elegant pastry", aspect: "aspect-[3/4]" },
-    { src: gallery5, alt: "Espresso machine", aspect: "aspect-[4/3]" },
+    { src: gallery6, alt: "Continental Dishes", aspect: "aspect-[3/4]" },
+    { src: gallery5, alt: "Savory Selections", aspect: "aspect-[4/3]" },
   ];
 
   return (
     <section id="gallery" className="py-24 bg-background">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -28,7 +28,7 @@ export function Gallery() {
           >
             A Glimpse <span className="text-primary italic font-normal">Inside</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -39,7 +39,7 @@ export function Gallery() {
           </motion.p>
         </div>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
           {images.map((img, index) => (
             <motion.div
               key={index}
@@ -47,11 +47,11 @@ export function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: (index % 3) * 0.1, duration: 0.6 }}
-              className="break-inside-avoid relative group rounded-2xl overflow-hidden bg-card border border-border"
+              className="break-inside-avoid mb-6 relative group rounded-2xl overflow-hidden bg-card border border-border"
             >
-              <img 
-                src={img.src} 
-                alt={img.alt} 
+              <img
+                src={img.src}
+                alt={img.alt}
                 className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
                 onError={(e) => {
